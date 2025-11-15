@@ -6,7 +6,7 @@ main_list = []
 user_is_quit = False
 
 def put_in_new_item():
-    os.system('clear')
+    os.system('cls')
     print('are you sure you want to add a new item? \n1. yes\n2. no')
     temp_input = input('')
 
@@ -15,25 +15,25 @@ def put_in_new_item():
         main_list.append(new_word)
     elif temp_input == 2:
         pass
-    os.system('clear')
+    os.system('cls')
 
 def show_current_list():
-    os.system('clear')
+    os.system('cls')
     for item in main_list:
         print(item)
-        temp_input = input('this is the current list\n1. back\n')
-        if temp_input == '1':
-            pass
-    os.system('clear')
+    temp_input = input('this is the current list\n1. back\n')
+    if temp_input == '1':
+        pass
+    os.system('cls')
 
 def pull_random_item():
-    os.system('clear')
+    os.system('cls')
 
 def empty_list():
-    os.system('clear')
+    os.system('cls')
 
 #code
-os.system('clear')
+os.system('cls')
 while user_is_quit == False:
     print('please choose a option \n1. put a new item into the list \n2. see current list \n3. pull out a random item from the list \n4. empty out list\n5. quit')
     temp_input = input('')
@@ -41,7 +41,7 @@ while user_is_quit == False:
     if temp_input == '1':
         put_in_new_item()
     elif temp_input == '2':
-        if len(main_list) == 0:
+        if len(main_list) != 0:
             show_current_list()
         else:
             print('the list it currently empty')
